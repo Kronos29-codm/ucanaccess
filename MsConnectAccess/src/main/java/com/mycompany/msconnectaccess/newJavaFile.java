@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class newJavaFile {
     public static Connection conn() {
 try {
-            String url = "C://Users//sacro//OneDrive//Documents";
+            String url = "jdbc:ucanaccess//C://Users//sacro//OneDrive//Documents";
             Connection conn = DriverManager.getConnection(url);
             return conn;
         } catch (SQLException e) {
