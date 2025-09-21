@@ -3,17 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Other/File.java to edit this template
  */
 package com.mycompany.msconnectaccess;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 
 /**
  *
  * @author CL2~PC03
  */
 public class newJavaFile {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        // TODO code application logic here
+    public static Connection conn() {
+try {
+            String url = "C://Users//sacro//OneDrive//Documents";
+            Connection conn = DriverManager.getConnection(url);
+            return conn;
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return null;
     }
 }
